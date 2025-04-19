@@ -2,7 +2,7 @@
 FROM node:18 AS frontend-build
 WORKDIR /app/vitereact
 # Copy package files and install dependencies with --legacy-peer-deps
-COPY vitereact/package.json vitereact/package-lock.json ./
+COPY vitereact/package.json  ./
 RUN npm install --legacy-peer-deps
 # Copy the rest of the frontend files and build
 COPY vitereact ./
@@ -12,7 +12,7 @@ RUN npm run build
 FROM node:18
 WORKDIR /app/backend
 # Copy package files and install production dependencies
-COPY backend/package.json backend/package-lock.json ./
+COPY backend/package.json  ./
 # Install dependencies
 RUN npm install --production
 # Copy the backend files
