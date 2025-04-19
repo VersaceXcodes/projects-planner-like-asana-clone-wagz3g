@@ -6,6 +6,8 @@ COPY vitereact/package.json  ./
 RUN npm install --legacy-peer-deps
 # Copy the rest of the frontend files and build
 COPY vitereact ./
+# Run ESLint to check for linting errors
+RUN npx eslint .
 RUN npm run build
 
 # Stage 2: Set up the Node.js backend
