@@ -7,6 +7,10 @@ import tseslint from "typescript-eslint";
 import importPlugin from "eslint-plugin-import";
 
 export default tseslint.config(
+  // Add this object to ignore the ui directory
+  {
+    ignores: ["src/components/ui/**/*"]
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   react.configs.flat.recommended,
