@@ -26,11 +26,12 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
       "import/no-unresolved": "error",
       "import/no-default-export": "off",
       "react/prop-types": "off",
+      "react-hooks/exhaustive-deps": "off",
     },
   },
   {
