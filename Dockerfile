@@ -4,6 +4,7 @@ WORKDIR /app/vitereact
 # Copy package files and install dependencies with --legacy-peer-deps
 COPY vitereact/package.json  ./
 RUN npm install --legacy-peer-deps
+RUN npm install --save-dev eslint-plugin-import eslint-plugin-react @typescript-eslint/parser @typescript-eslint/eslint-plugin
 # Copy the rest of the frontend files and build
 COPY vitereact ./
 # Run ESLint to check for linting errors
